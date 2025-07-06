@@ -1,0 +1,19 @@
+ISR(TIMER0_OVF_vect)
+타/카0 오버플로우 모드 설정한 함수같아보임. main함수에서 타/카0 레지스터 설정하고 지우면 괜찮아보임
+---------------------------------
+void calibrate() 
+초기값 읽기라고만 되어있음.
+---------------------------------
+void get_raw_data()
+처음 시작할 때 unsigned char형으로 선언한 변수들에 각 값을 가져오는 듯.
+twi_read는 각 변수들 주소로 쓰는거 보니까 데이터시트로 확인해보면 나올거 같음 
+---------------------------------
+void twi_write(unsigned char address,unsigned char data)
+unsigned char twi_read(char address)
+처음봄 TWI 따로 찾아봐야 할 듯 함.
+---------------------------------
+void USART_Transmit(unsigned char tx_data)
+단순 전송. 블루투스 할때도 썼던 함수
+---------------------------------
+void USART_Transmit_init4(int data)
+data값 10의 자리로 나눠서 temp에 저장후 송신
